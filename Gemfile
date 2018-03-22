@@ -21,11 +21,19 @@ gem 'uglifier', '>= 1.3.0'
 gem 'pg'
 gem 'dotenv-rails'
 gem 'slim-rails'
+gem 'devise'
+gem 'active_model_serializers', '~> 0.10.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails'
+  gem 'database_cleaner'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'rails-controller-testing'
+  gem 'simplecov', require: false
 end
 
 group :development do

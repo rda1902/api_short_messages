@@ -38,3 +38,4 @@ client/flow-typed/npm
 /public/spec
 /public/tmp
 /public/uploads
+/coverage

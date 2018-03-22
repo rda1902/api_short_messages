@@ -1,0 +1,15 @@
+ru:
+  activerecord:
+      errors:
+        messages:
+          message_is_long: 'Сообщение не может быть пустым и больше чем 140 символов'
+        models:
+          user:
+            attributes:
+              email:
+                taken: 'Email уже занят!'
+
+          message:
+            attributes:
+              user:
+                required: 'Необходимо указать пользователя!'
