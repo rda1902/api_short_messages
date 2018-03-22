@@ -2,7 +2,12 @@ module Api
   module V1
     class MessagesController < ApiController
 
-      before_action :token_authentication
+      before_action :token_authentication, only: :create
+
+      def index
+        hash = ActiveModelSerializers::SerializableResource.new(Message.all).as_json
+        render json: hash
+      end
 
       def create
         message = Message.new(message_params)

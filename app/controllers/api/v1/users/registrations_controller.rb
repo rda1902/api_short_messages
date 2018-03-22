@@ -10,7 +10,7 @@ module Api
           user = User.new(user_params)
           return render json: { errors: user.errors }, status: 400 unless user.save
           user.generate_api_token
-          hash = ActiveModelSerializers::SerializableResource.new(user).as_json
+          hash = ActiveModelSerializers::SerializableResource.new(user, api_token: true).as_json
           render json: hash
         end
 
