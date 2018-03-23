@@ -35,6 +35,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'simplecov', require: false
   gem 'sprockets-es6'
+  gem 'rubocop', require: false
 end
 
 group :development do
