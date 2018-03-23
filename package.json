@@ -1,5 +1,10 @@
 {
   "name": "api_short_messages",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  },
+  "devDependencies": {
+    "jquery": "3.1.1"
+  }
 }

@@ -1,0 +1,16 @@
+div
+  | user id:
+  strong = item[:user].id
+div
+  | user email:
+  strong = item[:user].email
+div
+  | message id:
+  strong = item[:message]&.id
+div
+  | message text:
+  strong = item[:message]&.text
+div
+  | message count_of_votes:
+  strong = item[:message_votes_count]
+hr

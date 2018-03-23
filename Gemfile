@@ -34,6 +34,7 @@ group :development, :test do
   gem 'shoulda-matchers', '~> 3.1'
   gem 'rails-controller-testing'
   gem 'simplecov', require: false
+  gem 'sprockets-es6'
 end
 
 group :development do
