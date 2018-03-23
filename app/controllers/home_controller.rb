@@ -4,9 +4,9 @@ class HomeController < ApplicationController
   before_action :set_dates, only: :index
 
   def index
-    @top5_by_count_of_messages = User.top5_by_count_of_messages(@dates)
-    @top5_by_message_votes = User.top5_by_vote_of_messages(@dates)
-    @top5_by_average_message_rating = User.top5_by_average_message_rating(@dates)
+    @top_by_count_of_messages = User.top_by_count_of_messages(@dates)
+    @top_by_message_votes = User.top_by_vote_of_messages(@dates)
+    @top_by_average_message_rating = User.top_by_average_message_rating(@dates)
   end
 
   private
