@@ -1,0 +1,20 @@
+ru:
+  start_date: Начало
+  end_date: Конец
+  by_count_of_messages: Топ-5 кто больше всех пишет
+  by_count_of_messages: Топ-5 по голосам
+  top_by_average_message_rating: Топ-5 по рейтингу
+  activerecord:
+      errors:
+        messages:
+          message_is_long: 'Сообщение не может быть пустым и больше чем 140 символов'
+        models:
+          user:
+            attributes:
+              email:
+                taken: 'Email уже занят!'
+
+          message:
+            attributes:
+              user:
+                required: 'Необходимо указать пользователя!'

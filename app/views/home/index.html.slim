@@ -1,0 +1,36 @@
+.col-md-4
+  .panel.panel-default
+    .panel-body
+      form action='/' method='get'
+        .form-group
+          label = I18n.t('start_date')
+          input.form-control name='start' type='date'
+        .form-group
+          label = I18n.t('end_date')
+          input.form-control name='end' type='date'
+        button type='submit' class='btn btn-success' ОК
+.row
+.col-md-12
+  .panel.panel-default
+    .panel-body
+      ul.nav.nav-tabs role='tablist'
+        li.active role='presentation'
+          a href='#by_count_of_messages' aria-controls='by_count_of_messages' role='tab' data-toggle='tab' = I18n.t('by_count_of_messages')
+        li role='presentation'
+          a href='#top_by_message_votes' aria-controls='top_by_message_votes' role='tab' data-toggle='tab' = I18n.t('by_count_of_messages')
+        li role='presentation'
+          a href='#top_by_average_message_rating' aria-controls='top_by_average_message_rating' role='tab' data-toggle='tab' = I18n.t('top_by_average_message_rating')
+
+
+      .tab-content
+        #by_count_of_messages.tab-pane.active role='tabpanel'
+          - @top_by_count_of_messages.each do |user|
+            = render 'by_count_of_messages', user: user
+
+        #top_by_message_votes.tab-pane role='tabpanel'
+          - @top_by_message_votes.each do |item|
+            = render 'by_message_votes', item: item
+
+        #top_by_average_message_rating.tab-pane role='tabpanel'
+          - @top_by_average_message_rating.each do |item|
+            = render 'by_average_message_rating', item: item
