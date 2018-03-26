@@ -36,6 +36,7 @@ group :development, :test do
   gem 'simplecov', require: false
   gem 'sprockets-es6'
   gem 'rubocop', require: false
+  gem 'interactor', "~> 3.0"
 end
 
 group :development do

@@ -10,10 +10,9 @@ module Api
       end
 
       def create
-        message = Message.new(message_params)
-        message.user = @current_user
-        return render json: { errors: message.errors }, status: 400 unless message.save
-        hash = ActiveModelSerializers::SerializableResource.new(message).as_json
+        result = CreateMessage.call(message_params: message_params, current_user: @current_user)
+        return render json: { errors: result.errors }, status: 400 if result.failure?
+        hash = ActiveModelSerializers::SerializableResource.new(result.message).as_json
         render json: hash
       end
 

@@ -19,6 +19,15 @@ RSpec.describe Api::V1::MessagesController, type: :controller do
         expect(hash['user']).to eq user_hash
         expect(response.status).to eq 200
       end
+
+      it 'try create message and receive error' do
+        params = { params: { messages: { text: '' } } }
+        post :create, params
+        expect(Message.all.size).to eq 0
+        hash = JSON.parse(response.body)
+        expect(hash['errors']['text'].first).to eq I18n.t('activerecord.errors.messages.message_error')
+        expect(response.status).to eq 400
+      end
     end
   end
 
