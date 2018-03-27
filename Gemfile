@@ -23,6 +23,8 @@ gem 'dotenv-rails'
 gem 'slim-rails'
 gem 'devise'
 gem 'active_model_serializers', '~> 0.10.5'
+gem 'interactor', '~> 3.0'
+gem 'sprockets-es6'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -34,9 +36,7 @@ group :development, :test do
   gem 'shoulda-matchers', '~> 3.1'
   gem 'rails-controller-testing'
   gem 'simplecov', require: false
-  gem 'sprockets-es6'
   gem 'rubocop', require: false
-  gem 'interactor', "~> 3.0"
 end
 
 group :development do
