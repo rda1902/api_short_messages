@@ -33,7 +33,7 @@ set :rvm_ruby_version, '2.4.1'
 
 set :nvm_type, :user # or :system, depends on your nvm setup
 set :nvm_node, 'v8.11.1'
-set :nvm_map_bins, %w(node npm yarn cross-env webpack flow-typed)
+set :nvm_map_bins, %w[node npm yarn cross-env webpack flow-typed]
 
 # set :yarn_target_path, -> { release_path.join('client') } #
 set :yarn_flags, '--production --silent --no-progress'    # default
