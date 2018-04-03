@@ -3,7 +3,7 @@ lock '3.6.1'
 
 Dotenv.load(".env.#{fetch(:stage)}", '.env')
 
-set :application, ENV['APP_NAME']
+# set :application, ENV['APP_NAME']
 set :repo_url,    ENV['REPO']
 
 # Default branch is :master
